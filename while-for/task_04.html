@@ -1,0 +1,36 @@
+<html>
+
+<script>
+    "use strict";
+
+    function isPrime(n) {
+        let isPrime = true;
+
+        if (n < 0) {
+            return false;
+        } else if (n == 1 || n == 2) {
+            return true;
+        }
+        for (let i = 2; i < n; i++) {
+            if (n % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        return isPrime;
+    }
+
+    let n = prompt("Input number", "");
+    let solution = "";
+    for (let index = 2; index <= n; index++) {
+        if (isPrime(index)) {
+            solution += index + ", ";
+        }
+    }
+    alert(solution);
+
+
+
+</script>
+
+</html>
