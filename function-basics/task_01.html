@@ -1,0 +1,21 @@
+<html>
+
+<script>
+    "use strict";
+
+    alert(checkAge(prompt('Age?','')));
+
+    function checkAge(age) {
+        // if (age > 18) {
+        //     return true;
+        // } else {
+        //     return confirm('Did parents allow you?');
+        // }
+
+        // return age > 18 ? true : confirm('Did parents allow you?');
+        
+        return age > 18 || confirm('Did parents allow you?');
+    }
+</script>
+
+</html>
