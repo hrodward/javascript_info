@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color: darkslategrey">
+    <script>
+        "use strict";
+
+        let user = { name: "John", age: 30, "likes birds": true };
+        user.isAdmin = false;
+        console.log(user["likes birds"]); // <-- multi word property access
+        delete user.age;
+        console.log(user.age); // <-- undefined
+
+        // for(let key in user){
+        //     console.log(key + '=' + user[key]);
+        // }
+
+        console.log("name2" in user);
+
+        let clone = Object.assign({}, user, user); // 2nd user overwrites AFAIK
+
+        for (let key in clone) {
+            console.log(key + '=' + clone[key]);
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color: darkslategrey">
+    <script>
+        "use strict";
+
+        let user = {
+            name: "John",
+            age: 19,
+            sayHi() {
+                console.log("Hi");
+                // let warp = function sayBye() {
+                //     console.log(`Bye ${this.name}`); // <-- Cannot read property 'name' of undefined
+                // }
+                let warp = () => console.log(`Bye ${this.name}`); // <-- Bye John
+                warp();
+            }
+        };
+
+        user.sayHi();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color: darkslategrey">
+    <script>
+        "use strict";
+
+        let isEmpty = schedule => {
+            for (let key in schedule) {
+                if (key) { // <-- this is not needed. if it gets in, there's something
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        let schedule = {};
+        alert(isEmpty(schedule)); // true
+
+        schedule["8:30"] = "get up";
+        alert(isEmpty(schedule)); // false
+
+        delete schedule["8:30"];
+        alert(isEmpty(schedule)); // true
+    </script>
+</body>
+
+</html>

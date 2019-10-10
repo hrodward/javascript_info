@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color: darkslategrey">
+    <script>
+        "use strict";
+
+        let sumSalaries = employees => {
+            let sum = 0;
+            for (let name in employees) {
+                sum += employees[name];
+            }
+            return sum;
+        }
+
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130
+        }
+
+        alert("The sum is " + sumSalaries(salaries));
+
+    </script>
+</body>
+
+</html>

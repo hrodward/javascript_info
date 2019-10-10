@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color: darkslategrey">
+    <script>
+        "use strict";
+
+        function makeUser() {
+            return {
+                name: "John",
+                ref() {
+                    return this;
+                }
+            };
+        };
+
+        let user = makeUser();
+
+        user.name = "Pete";
+
+        alert(user.ref().name); // John
+
+    </script>
+</body>
+
+</html>
